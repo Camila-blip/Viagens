@@ -4,10 +4,10 @@ import Reservas from "./pages/Reservas";
 import Home from "./pages/Home";
 
 export default function Rotas(){
-	return(
-		<Routes>
-			<Route exact path="/"  element={<Home />} />
-			<Route exact path="/reservas/:reservas"  element={<Reservas />} />
-		</Routes>
-	);
+    return(
+        <Routes>
+            <Route exact path="/"  element={<Home />} />
+            <Route exact path="/reservas/"  element={<Reservas />} />
+        </Routes>
+    );
 }
