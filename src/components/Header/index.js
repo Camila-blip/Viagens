@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
-import {Container, Logo, Reserva} from "./header.js";
+import {Container, Logo, Reserva} from "./styles";
 
 
 export default function Header(){

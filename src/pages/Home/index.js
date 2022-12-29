@@ -1,9 +1,9 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { setReserva } from "../../store/modules/reserve/reducer";
 import { MdFlightTakeoff } from "react-icons/md";
 import api from "../../services/api";
-import { Box } from "./home";
+import { Box } from "./styles";
 
 export default function Home(){
     const dispatch = useDispatch();
@@ -13,14 +13,13 @@ export default function Home(){
         async function loadApi(){
             const response = await api.get("trips");
             setTrips(response.data);
-            console.log(response.data);
         }
         loadApi();
     },[]);
 
-    function handleAdd(trip){
+    const handleAdd = useCallback((trip)=>{
         dispatch(setReserva(trip));
-    }
+    });
 
     return(
         <div>
